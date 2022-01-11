@@ -1,0 +1,47 @@
+package com.selenium.test;
+
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import com.selenium.ui.ProjectDetailPage;
+
+
+public class LoginTest {
+	
+	@Test
+	public static void userSignUp() throws Exception
+	{
+		System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/index.html");
+		driver.findElement(By.id(ProjectDetailPage.SIGNUP)).click();
+		driver.findElement(By.xpath(ProjectDetailPage.USERNAME)).isEnabled();
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;  
+		jsExecutor.executeScript("document.getElementById('sign-username').value='testuser3'"); 
+		jsExecutor.executeScript("document.getElementById('sign-password').value='testpwd3'"); 
+		/*Robot rb = new Robot();
+		rb.keyPress(KeyEvent.VK_ENTER);*/
+		
+		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.className(ProjectDetailPage.SIGNUP_BUTTON))).click();
+		driver.findElement(By.className(ProjectDetailPage.SIGNUP_BUTTON)).click();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		driver.close();	
+	}
+	
+	
+}

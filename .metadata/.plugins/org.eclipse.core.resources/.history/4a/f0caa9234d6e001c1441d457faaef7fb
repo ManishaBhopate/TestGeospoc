@@ -1,0 +1,37 @@
+package com.selenium.test;
+
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.selenium.ui.ProjectDetailPage;
+
+
+public class LoginTest {
+	
+	@Test
+	public static void userSignUp() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/index.html");
+		driver.findElement(By.id(ProjectDetailPage.SIGNUP)).click();
+		driver.findElement(By.xpath(ProjectDetailPage.USERNAME)).isEnabled();
+		
+		
+		
+		/*driver.switchTo().activeElement();
+		driver.findElement(By.id(ProjectDetailPage.SIGNUP_PAGE));
+		driver.findElement(By.id(ProjectDetailPage.USERNAME)).sendKeys("manisha");
+		driver.findElement(By.id(ProjectDetailPage.USERNAME)).sendKeys("Bhopate");*/
+		String title = driver.getTitle(); System.out.println(title);
+		driver.close();	
+	}
+	
+	
+}

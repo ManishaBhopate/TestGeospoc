@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="888484" started-at="2022-01-07T05:57:13Z" finished-at="2022-01-07T06:12:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="888484" started-at="2022-01-07T05:57:13Z" finished-at="2022-01-07T06:12:01Z">
+      <class name="com.selenium.test.LoginTest">
+        <test-method status="PASS" signature="loginlogout()[pri:0, instance:com.selenium.test.LoginTest@78e117e3]" name="loginlogout" duration-ms="888464" started-at="2022-01-07T11:27:13Z" finished-at="2022-01-07T11:42:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginlogout -->
+      </class> <!-- com.selenium.test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

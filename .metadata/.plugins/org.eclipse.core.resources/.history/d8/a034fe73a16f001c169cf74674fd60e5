@@ -1,0 +1,30 @@
+package com.selenium.test;
+
+import java.awt.AWTException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.selenium.ui.ProjectDetailPage;
+
+public class PlaceOrder {
+	
+	@Test
+	public static void loginlogout() throws AWTException 
+	{
+		System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/index.html");
+		driver.findElement(By.id(ProjectDetailPage.CONTACT_LINK)).click();
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver; 
+		jsExecutor.executeScript("document.getElementById('loginusername').value='testm11'"); 
+		jsExecutor.executeScript("document.getElementById('loginpassword').value='testmpwd11'"); 
+		jsExecutor.executeScript("document.getElementById('loginpassword').value='testmpwd11'"); 
+		
+		
+	}
+
+}

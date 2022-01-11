@@ -1,0 +1,8 @@
+package com.selenium.ui;
+
+public class ProjectDetailPage extends Object {
+	
+	 public static final String SIGNUP = "signin2";
+	 public static final String SiGNUP_PAGE="signInModal";
+
+}

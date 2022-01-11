@@ -1,0 +1,16 @@
+package com.selenium.ui;
+
+public class ProjectDetailPage extends Object {
+	
+	 public static final String SIGNUP = "signin2";
+	 public static final String SIGNUP_PAGE="signInModal";
+	 public static final String USERNAME="//*[@id='sign-username']";
+	 public static final String PASSWORD="sign-password";
+	 public static final String SIGNUP_BUTTON="//button[text()='Sign up']";
+	 public static final String Login = "login2";
+	 public static final String LOGIN_USERNAME="loginusername";
+	 public static final String LOGIN_PASSWORD="loginpassword";
+	 public static final String LOGOUT="logout2";
+	 
+
+}
